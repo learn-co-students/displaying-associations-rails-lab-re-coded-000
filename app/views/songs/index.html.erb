@@ -1,0 +1,9 @@
+<h1> All Songs</h1>
+
+<h3><%= pluralize(@songs.size, 'Song') %></h3>
+<ul>
+  <% @songs.each do |song| %>
+    <li><%= link_to song.name_title_format, song_path(song) %></li>
+
+  <% end %>
+</ul>
